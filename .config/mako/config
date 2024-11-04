@@ -1,0 +1,16 @@
+# Colors
+
+background-color=#312e30
+text-color=#ffffff
+border-color=#fcf434
+progress-color=#9c59d1
+border-size=3
+border-radius=8
+padding=15
+icon-path=/usr/share/icons/Yaru/
+actions=1
+default-timeout=3333
+anchor=top-center
+
+[urgency=high]
+border-color=#f5a97f

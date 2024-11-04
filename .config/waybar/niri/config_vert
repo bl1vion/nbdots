@@ -1,0 +1,169 @@
+{
+  "layer": "top",
+  "reload_style_on_change": true,
+  "position": "right",
+  "output": ["eDP-1"],
+  "margin-top": 5,
+  "height": 35,
+  "spacing": 8,
+  "modules-center": ["custom/launcher", "group/time", "group/mainline", "group/volume", "group/net", "group/group-power", "custom/updates" ],
+  "modules-left": [],
+  "modules-right": [],
+  
+  "group/net": {
+      "orientation": "vertical",
+      "modules":
+      [
+          "network"
+      ]
+    			
+  },
+
+  "group/mainline": {
+  	"orientation": "vertical",
+        "modules": [
+       	  "custom/mainline#1",
+	  "custom/mainline#2",
+	  "custom/mainline#3"
+        ]
+  },
+
+  "custom/mainline#1": {
+  	"format": "",
+        "tooltip": false,
+        "on-click": "firefox"
+  },
+
+  "custom/mainline#2": {
+  	"format": "󰖂",
+	"tooltip": false,
+	"on-click": "mullvad-vpn"
+  },
+
+  "custom/mainline#3": {
+	"format": "󰍳",
+	"tooltip": false,
+  	"on-click": "flatpak run org.prismlauncher.PrismLauncher"
+  },
+
+  "group/volume": {
+  	"orientation": "vertical",
+    "drawer": {
+    	"transition-duration": 250,
+        "children-class": "not-pulseaudio#1",
+        "transition-left-to-right": true,
+    },
+    "modules": [
+    	"pulseaudio#1",
+        "pulseaudio#2"
+    ]
+    			
+  },
+
+  "group/time": {
+  	"orientation": "vertical",
+    "modules": [
+        "clock#2",
+        "clock#3",
+        "clock#4"
+    ],			
+  },
+
+  "network": {
+  	"tooltip": true,
+    "format-wifi": " ",
+    "format-ethernet": "󰈀",
+    "tooltip-format": "Network: \nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>",
+    "format-linked": "󰈀 {ifname} (No IP)",
+    "format-disconnected": "󰖪 ",
+    "tooltip-format-disconnected": "Disconnected",
+    "interval": 2,
+  },
+
+  "pulseaudio#1": {
+  	"tooltip": false,
+    "scroll-step": 5,
+    "format": "{icon}",
+    "format-icons": {
+    	"default": ["","","",""]
+    },
+    "on-click":"pavucontrol"
+  },
+    
+  "pulseaudio#2": {
+  	"tooltip": false,
+    "scroll-step": 5,
+    "format": "{volume}",
+    "on-click":"pavucontrol"
+  },
+        
+  "clock#1": {
+  	"interval": 1,
+    "format": "",
+    "tooltip": false
+  },
+
+  "clock#2": {
+  	  "interval": 1,
+  	  "format": "{:%I}",
+  	  "tooltip": false
+  },
+
+  "clock#3": {
+  	"interval": 1,
+    "format": "{:%M}",
+    "tooltip": false
+  },
+
+  "clock#4": {
+    "interval": 1,
+    "format": "{:%p}",
+    "tooltip": false
+  },
+
+  "group/group-power": {
+     "orientation": "inherit",
+     "drawer": {
+ 	    "transition-duration": 500,
+        "children-class": "not-power",
+        "transition-left-to-right": true,
+     },
+     "modules": [
+    	 "custom/power",
+         "custom/lock",
+         "custom/exit",
+         "custom/reboot",
+     ]
+  },
+
+  "custom/launcher": {
+  	"format": "",
+	"tooltip": false,
+	"on-click": "fuzzel -a right --x-margin 8"
+  },
+   
+  "custom/exit": {
+  	"format": "󰗼",
+  	"tooltip": false,
+    "on-click": "niri msg action quit -s"
+  },
+   
+  "custom/lock": {
+  	"format": "󰍁",
+    "tooltip": false,
+    "on-click": "swaylock -C ~/.config/swaylock/niri.conf"
+  },
+   
+  "custom/reboot": {
+  	"format": "󰜉",
+    "tooltip": false,
+    "on-click": "systemctl -i reboot"
+  },
+   
+  "custom/power": {
+  	"format": "",
+    "tooltip": false,
+    "on-click": "systemctl -i poweroff"
+  },
+
+}

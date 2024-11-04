@@ -1,0 +1,7 @@
+#!/bin/bash
+
+while :
+do
+    sleep 1200
+    notify-send -t 20000 -h string:x-canonical-private-synchronous:ttt-notify "It's time to take a break!" "Look 20 feet away." -i "/usr/share/icons/Yaru/scalable/status/eye-open-negative-filled-symbolic.svg"
+done
