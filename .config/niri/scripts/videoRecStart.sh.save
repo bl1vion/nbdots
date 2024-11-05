@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [ -f /var/tmp/videorec-pid ]; then
+    notify-send -h string:x-canonical-private-synchronous:video-notify "recording already in progress" -i "/usr/share/icons/Yaru/scalable/status/camera-disabled-symbolic.svg"
+    exit
+fi
+
+wf-recorder -g "$(slurp)" -f &
+
+notify-send -h string:x-canonical-private-synchronous:video-notify "started recording" -i /usr/share/icons/Yaru/scalable/camera/camera-focus-symbolic.svg
