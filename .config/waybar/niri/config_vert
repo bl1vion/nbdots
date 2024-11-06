@@ -36,22 +36,26 @@
     },
     "custom/mainline#1": {
         "format": "\ue658",
-        "tooltip": "Firefox Browser",
+        "tooltip": true,
+        "tooltip-format": "Firefox Browser",
         "on-click": "firefox"
     },
     "custom/mainline#2": {
         "format": "\udb81\udd82",
-        "tooltip": "Mullvad VPN",
+	"tooltip": true,
+        "tooltip-format": "Mullvad VPN",
         "on-click": "mullvad-vpn"
     },
     "custom/mainline#3": {
         "format": "\udb80\udf73",
-        "tooltip": "Prism Launcher",
+	"tooltip": true,
+        "tooltip-format": "Prism Launcher",
         "on-click": "flatpak run org.prismlauncher.PrismLauncher"
     },
     "custom/mainline#4": {
 	"format": "\udb81\ude6f",
-	"tooltip": "Discord",
+	"tooltip": true,
+	"tooltip-format": "Discord",
 	"on-click": "vesktop"
     },
     "group/volume": {
