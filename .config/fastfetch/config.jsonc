@@ -9,7 +9,6 @@
   },
   "modules": [
         "break",
-  
     {
         "type": "title",  
     },
@@ -19,82 +18,50 @@
     },
     {
     	"type": "os",
-        "key": " OS ",
-        "keyColor": "blue",
+        "key": "os!",
+        "keyColor": "magenta",
         "format": "{2}",
-        "outputColor": "red"
+        "outputColor": "white"
     },
     {
     	"type": "kernel",
-        "key": "├ ",
-        "keyColor": "blue",
-        "outputColor": "red"
+        "key": "knl!",
+        "keyColor": "magenta",
+        "outputColor": "white"
     },
     {
         "type": "packages",
-        "key": "├󰏖 ",
-        "keyColor": "blue",
-        "outputColor": "red"
+        "key": "pkg!",
+        "keyColor": "magenta",
+        "outputColor": "white"
     },
     {
         "type": "shell",
-        "key": "└ ",
-        "keyColor": "blue",
-        "outputColor": "red"
+        "key": "sh!",
+        "keyColor": "magenta",
+        "outputColor": "white"
     },
         "break",
 
     {
         "type": "wm",
-        "key": " WM",
-        "keyColor": "blue",
-        "outputColor": "red"
+        "key": "wm!",
+        "keyColor": "magenta",
+        "outputColor": "white"
     },
-    {
-        "type": "terminal",
-        "key": "├ ",
-		"keyColor": "blue",
-        "outputColor": "red"
-    },
-    {
-        "type": "uptime",
-        "key": "├󰅐 ",
-    	"keyColor": "blue",
-        "outputColor": "red"
-    },
-    {
-        "type": "display",
-        "key": "└󰍹 ",
-        "keyColor": "blue",
-        "outputColor": "red"
-    },
-    	"break",
-
     {
         "type": "host",
-        "key": "󰌢 PC ",
-        "keyColor": "blue",
-        "outputColor": "red"
+        "key": "hs!",
+        "keyColor": "magenta",
+        "outputColor": "white"
     },
     {
         "type": "cpu",
-        "key": "├󰻠 ",
-        "keyColor": "blue",
-        "outputColor": "red"
+        "key": "cpu!",
+        "keyColor": "magenta",
+        "outputColor": "white"
     },
-    {
-        "type": "gpu",
-        "key": "├󰍛 ",
-        "keyColor": "blue",
-        "outputColor": "red"
-    },
-    {
-        "type": "memory",
-        "key": "└󰑭 ",
-        "keyColor": "blue",
-        "outputColor": "red"
-    },
-		"break",
+    "break",
     {
     	"type": "colors"
     }
